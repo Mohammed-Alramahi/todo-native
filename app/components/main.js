@@ -14,8 +14,8 @@ class Main extends React.Component {
     super(props);
     this.state = {
       noteArray: [
-        { date: "2019/01/01", note: "Hello" },
-        { date: "2019/01/02", note: "World" },
+        { date: "2021/08/30", note: "Hello" },
+        { date: "2021/08/30", note: "World" },
       ],
       noteText: "",
     };

@@ -37,7 +37,7 @@ function SignUp(props) {
           style={styles.emailInput}
           onChangeText={(val) => setEmail(val)}
           value={email}
-          placeholder="Enter Email Address"
+          placeholder="Enter User Name"
         />
         <Icon
           name="lock-closed"
