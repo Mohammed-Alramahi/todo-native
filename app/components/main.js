@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import {
   View,
   Text,
@@ -9,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Note from "./note";
-
+import SignUp from "./auth/signup";
 class Main extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +32,9 @@ class Main extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headerText}>Todo</Text>
+          <Text style={styles.headerText}>
+            ❤️ {this.props.user.toUpperCase()} ❤️ Notes ❤️
+          </Text>
         </View>
         <ScrollView style={styles.scrollView}>{notes}</ScrollView>
 
@@ -51,7 +52,7 @@ class Main extends React.Component {
           onPress={this.addNote.bind(this)}
           style={styles.addButton}
         >
-          <Text style={styles.addButtonText}>+</Text>
+          <Text style={styles.addButtonText}>Add</Text>
         </TouchableOpacity>
       </View>
     );
@@ -75,18 +76,6 @@ class Main extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  header: {
-    backgroundColor: "#2196F3",
-    alignItems: "center",
-    justifyContent: "center",
-    borderBottomWidth: 10,
-    borderBottomColor: "#ddd",
-  },
-  headerText: {
-    color: "white",
-    fontSize: 20,
-    padding: 26,
   },
   scrollView: {
     flex: 1,
@@ -122,7 +111,19 @@ const styles = StyleSheet.create({
   },
   addButtonText: {
     color: "#fff",
-    fontSize: 36,
+    fontSize: 24,
+  },
+  header: {
+    backgroundColor: "#2196F3",
+    alignItems: "center",
+    justifyContent: "center",
+    borderBottomWidth: 10,
+    borderBottomColor: "#ddd",
+  },
+  headerText: {
+    color: "white",
+    fontSize: 20,
+    padding: 26,
   },
 });
 
